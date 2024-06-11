@@ -4,7 +4,7 @@ Creating a Django Blog
 For this project, I am using Ubuntu 22.04 and Python 3.10.
 Current Django version is 5.0.6 and PIP version is 24.0.
 
-* setting Django environment - 
+* Setting Django environment - 
 
     1.  Check Python installation with ( python3 --version or python --version ).
     2.  Install Python3 PIP module with ( sudo apt install python3-pip ).
@@ -21,3 +21,18 @@ Current Django version is 5.0.6 and PIP version is 24.0.
         with ( which python, which pip and python -V, pip -V ).
     12. Install Django in your virtual environment with ( pip install django ).
     13. Check Django installed properly with ( django-admin --version ).
+
+* Creating Django project -
+
+    1.  Create Django project with ( django-admin startproject labPortal ).
+        This will create a Django project 'labPortal' in django-blog folder.
+        You will see 'manage.py' file in this folder.
+
+* Creating Django first app - 
+
+    1.  Change directory to labPortal and create Django app in this folder 
+        with ( python manage.py startapp labPortalHome ). 'labPortalHome' is your Django app.
+    2.  Start Django app with ( ./manage.py runserver )
+    3.  Open http://127.0.0.1:8000/ link browser to see your Django app.
+
+    
