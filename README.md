@@ -35,4 +35,26 @@ Current Django version is 5.0.6 and PIP version is 24.0.
     2.  Start Django app with ( ./manage.py runserver )
     3.  Open http://127.0.0.1:8000/ link browser to see your Django app.
 
+* Setting up first Django app - 
+    
+    1.  Open 'labPortal/labPortal/settings.py' file and add first app name 'labPortalHome' 
+        in INSTALLED_APPS list.
+
+    2.  Open 'labPortal/labPortal/urls.py' and add 'include' in line number 18     
+        e.g. from django.urls import path, include
+
+        In 'urlpatterns' list add following line after line number 21,
+        e.g. path('', include('labPortalHome.urls')),
+
+    3.  Open 'labPortal\labPortalHome\views.py' file and create a view for home page.
+
+    4.  Create 'labPortal\labPortalHome\urls.py' file and create a url for home page.
+
+    5.  Start Django app with ( ./manage.py runserver )
+
+    6.  Open http://127.0.0.1:8000/ link browser to see your Django app pointing to your app now.
+
+    
+
+
     
