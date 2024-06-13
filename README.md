@@ -54,6 +54,53 @@ Current Django version is 5.0.6 and PIP version is 24.0.
 
     6.  Open http://127.0.0.1:8000/ link browser to see your Django app pointing to your app now.
 
+* Setting static files settings -
+
+    1. Open 'labPortal/labPortal/settings.py' file and 
+        add 'import  os' line, and under static files section add
+        
+        # Base URL to serve static files
+        STATIC_URL = '/static/'
+        # The absolute path to the directory where static files will be collected
+        STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+        # Additional locations the staticfiles app will traverse
+        STATICFILES_DIRS = [
+            os.path.join(BASE_DIR, 'labPortalHome/static'),
+        ]
+
+    2.  Run database migration command 
+        with ( ./manage.py makemigrations and ./manage.py migrate )
+
+    3.  Create Django superuser with ( ./manage.py createsuperuser )
+
+    4. Test superuser login at http://127.0.0.1:8000/admin
+
+    5.  Collect all static files used in Django apps 
+        with ( ./manage.py collectstatic )
+
+    6.  With above commands all static files such as css, js and
+        images will be stored in staticfiles folder and this folder
+        will be used by WebServer to server static files.
+
+* Setup Home page for first app - 
+
+    1.  Store all static files required under 
+        'labPortalHome/static/labPortalHome/css..js..img' folders 
+        to provide app level static files.
+    
+    2.  Create template folder to serve HTML files
+        under 'labPortalHome/templates/labPortalHome/' 
+        folder to provide app level HTML templates.
+
+    3.  Create base.html under templates folder to 
+        serve repeatative HTML data like header, footer and navigation bar etc.
+
+    4.  Create 'lab_portal_home.html' under templates folder to 
+        serve as home page for your project, extend the base.html file.
+
+        
+
+
     
 
 
