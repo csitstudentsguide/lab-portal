@@ -1,10 +1,12 @@
-# django-blog
-Creating a Django Blog
+# Creating a Lab Portal using Django
 
 For this project, I am using Ubuntu 22.04 and Python 3.10.
 Current Django version is 5.0.6 and PIP version is 24.0.
 
-* Setting Django environment - 
+In this project, I am trying to use Django with Gunicorn wsgi server and NGINX proxy server.
+And also authomate the CI CD pipelines using Jenkins.
+
+## Setting Django environment - 
 
     1.  Check Python installation with ( python3 --version or python --version ).
     2.  Install Python3 PIP module with ( sudo apt install python3-pip ).
@@ -22,29 +24,29 @@ Current Django version is 5.0.6 and PIP version is 24.0.
     12. Install Django in your virtual environment with ( pip install django ).
     13. Check Django installed properly with ( django-admin --version ).
 
-* Creating Django project -
+## Creating Django project -
 
     1.  Create Django project with ( django-admin startproject labPortal ).
         This will create a Django project 'labPortal' in django-blog folder.
         You will see 'manage.py' file in this folder.
 
-* Creating Django first app - 
+## Creating Django first app - 
 
     1.  Change directory to labPortal and create Django app in this folder 
         with ( python manage.py startapp labPortalHome ). 'labPortalHome' is your Django app.
     2.  Start Django app with ( ./manage.py runserver )
     3.  Open http://127.0.0.1:8000/ link browser to see your Django app.
 
-* Setting up first Django app - 
+## Setting up first Django app - 
     
     1.  Open 'labPortal/labPortal/settings.py' file and add first app name 'labPortalHome' 
         in INSTALLED_APPS list.
 
     2.  Open 'labPortal/labPortal/urls.py' and add 'include' in line number 18     
-        e.g. from django.urls import path, include
+        e.g. `from django.urls import path, include`
 
         In 'urlpatterns' list add following line after line number 21,
-        e.g. path('', include('labPortalHome.urls')),
+        e.g. `path('', include('labPortalHome.urls')),`
 
     3.  Open 'labPortal\labPortalHome\views.py' file and create a view for home page.
 
@@ -54,16 +56,18 @@ Current Django version is 5.0.6 and PIP version is 24.0.
 
     6.  Open http://127.0.0.1:8000/ link browser to see your Django app pointing to your app now.
 
-* Setting static files settings -
+## Setting static files settings -
 
     1. Open 'labPortal/labPortal/settings.py' file and 
         add 'import  os' line, and under static files section add
         
-        # Base URL to serve static files
+        > Base URL to serve static files
         STATIC_URL = '/static/'
-        # The absolute path to the directory where static files will be collected
+
+        > The absolute path to the directory where static files will be collected
         STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-        # Additional locations the staticfiles app will traverse
+
+        > Additional locations the staticfiles app will traverse
         STATICFILES_DIRS = [
             os.path.join(BASE_DIR, 'labPortalHome/static'),
         ]
@@ -82,7 +86,7 @@ Current Django version is 5.0.6 and PIP version is 24.0.
         images will be stored in staticfiles folder and this folder
         will be used by WebServer to server static files.
 
-* Setup Home page for first app - 
+## Setup Home page for first app - 
 
     1.  Store all static files required under 
         'labPortalHome/static/labPortalHome/css..js..img' folders 
@@ -97,11 +101,3 @@ Current Django version is 5.0.6 and PIP version is 24.0.
 
     4.  Create 'lab_portal_home.html' under templates folder to 
         serve as home page for your project, extend the base.html file.
-
-        
-
-
-    
-
-
-    
