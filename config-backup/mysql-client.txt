@@ -1,0 +1,55 @@
+#######################################################################################
+# Installing MariaDB server Ubuntu 22.04
+
+sudo apt update -y
+sudo apt install mariadb-server
+sudo mysql_secure_installation
+
+# Login to MariaDB server with root privileges
+sudo mysql
+
+# Creating database
+CREATE DATABASE labportal CHARACTER SET utf8;
+
+# Creating database user
+CREATE USER lpadmin@localhost identified by 'password';
+
+# Grant database rights to user
+grant all on labportal.* to lpadmin@localhost;
+
+# Check database user login
+mysql -u lpadmin -p
+
+#######################################################################################
+# Installing mysqlclient in Django virtual environment
+
+sudo apt-get install pkg-config python3-dev default-libmysqlclient-dev build-essential
+
+pip install mysqlclient
+
+#######################################################################################
+# Configure database in Django setting
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "mydatabase",
+        "USER": "mydatabaseuser",
+        "PASSWORD": "mypassword",
+        "HOST": "127.0.0.1",
+        "PORT": "3306",
+    }
+}
+
+#######################################################################################
+# Django migrations
+
+python manage.py makemigrations
+python manage.py migrate
+
+Check database for tables created.
+
+#######################################################################################
+
+
+
