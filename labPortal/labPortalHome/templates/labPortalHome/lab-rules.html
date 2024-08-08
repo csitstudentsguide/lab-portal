@@ -1,0 +1,103 @@
+{% extends 'labPortalHome/base.html' %}
+{% load static %}
+
+{% block title %} Lab Portal | Home {% endblock %}
+
+{% block content %}
+
+<!-- Lab rules section -->
+<section>
+    <div class="container-lg mb-4">
+        <h1 class="h1">Lab Rules to follow in all labs</h1>
+    </div>
+
+    <div class="container-lg">
+        <div class="accordion" id="accordionExample1">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="fw-bold">About Lab Logbook</span>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
+                    <div class="accordion-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Student must do entry in the Lab Log book register</li>
+                            <li class="list-group-item">Student must do all entries correctly in the logbook, i.e. sn,
+                                system name, sap id, student name and sign</li>
+                            <li class="list-group-item">Student must forword the logbook to the next student after
+                                completing his entry</li>
+                            <li class="list-group-item">Students must complete the logbook entries in the first hour of
+                                lab time</li>
+                            <li class="list-group-item">Student must ensure of doing entry in logbook before leaving the
+                                lab</li>
+                            <li class="list-group-item">It's students whole responsibilty to do entry in lab logbook
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion" id="accordionExample2">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <span class="fw-bold">About handling computers</span>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample2">
+                    <div class="accordion-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Student must start the computer only after instructed by the
+                                faculty</li>
+                            <li class="list-group-item">Student must shutdown the computer properly before leaving the
+                                lab</li>
+                            <li class="list-group-item">Student must switch off the power buttons after shutting down
+                                the computer</li>
+                            <li class="list-group-item">Student must arrange the chair before leaving the lab</li>
+                            <li class="list-group-item">Student must handle the computers carefully</li>
+                            <li class="list-group-item">Student must not move or bend computer angle and position</li>
+                            <li class="list-group-item">Student must not put any thing on the computer table except pen,
+                                pencil and notebook</li>
+                            <li class="list-group-item">Student must keep their bags at one place in the lab instucted
+                                by the faculty</li>
+                            <li class="list-group-item">Student must keep water bottle down the computer table</li>
+                            <li class="list-group-item">The computer only have four connections, usb keyboard, usb
+                                mouse, power adapter and network port</li>
+                            <li class="list-group-item">Student must get familiar with computer connections</li>
+                            <li class="list-group-item">If computer is not starting then check for computer connections,
+                                else inform the lab assistant or faculty</li>
+                            <li class="list-group-item">If student find anything unusual with the computers, immediately
+                                inform to the lab assistant or faculy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion" id="accordionExample3">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        <span class="fw-bold">About Lab cleanliness</span>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionExample3">
+                    <div class="accordion-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Student must not bring eatables in the lab</li>
+                            <li class="list-group-item">Student must not make the lab untidy by throwing paper, pen,
+                                pencil etc in the lab</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock%}
