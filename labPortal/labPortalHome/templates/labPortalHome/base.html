@@ -34,6 +34,63 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'lab-rules' %}">Lab-rules</a>
                     </li>
+                    <li class="nav-item">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Launch Vision Mission
+                        </button>
+                    
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-danger text-center">
+                                <h1 class="modal-title w-100 fs-5 text-light " id="staticBackdropLabel">Department of Computer Science</h1>                                
+                                </div>
+                                <div class="modal-body">
+                             
+                                <div>
+                                    <h2 class="text-center w-100 text-danger h3">
+                                        &nbsp; &nbsp; <i class="bi bi-eye-fill"></i>
+                                        Vision
+                                    </h2>
+                                    <p class="lead text-justify">
+                                        To excel in computer science education and research, by prepairing the students with practical
+                                        knowledge and ethical values. We strive to empower students, enabling them to innovate using 
+                                        cutting-edge computing technologies to address societal challenges.
+                                    </p>
+                                </div>
+
+                                <hr>
+
+                                <div>
+                                    <h2 class="text-center w-100 text-danger h3">
+                                        &nbsp; &nbsp; <i class="bi bi-arrow-down-left-circle-fill"></i>                                   
+                                        Mission
+                                    </h2>
+                                    <ul>
+                                        <li class="lead mb-2">Empower students with a strong foundation in computer science
+                                            fundamentals and technical skills through innovative teaching pedagogies, fostering practical knowledge.
+                                        </li>
+                                        <li class="lead mb-2">
+                                            Cultivate ethical values, creativity, and an entrepreneurial mind-set among students to inspire innovation.
+                                        </li>
+                                        <li class="lead mb-2">Encourage students to prioritize sustainable solutions that enhance societal well-being.</li>
+                                        <li class="lead mb-2">Foster a culture of research excellence in computer science by promoting collaborative partnerships
+                                            between academia and industry.
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Understood</button>                            
+                                </div>
+                            </div>
+                            </div>
+                        </div>                            
+                    </li>                    
+                   
                     <!--
                     <li class="nav-item">
                         <a class="nav-link" href="#lab-features">Lab Featutes</a>
@@ -72,7 +129,8 @@
                     <div class="col-6 col-md-2 mb-3">
                         <h5>Menu</h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                            <li class="nav-item mb-2"><a href="{% url '' %}" class="nav-link p-0 text-body-secondary">Home</a></li>
+                            <li class="nav-item mb-2"><a class="nav-link p-0 text-body-secondary" href="{% url 'lab-rules' %}">Lab-rules</a></li>
                         </ul>
                     </div>
 
