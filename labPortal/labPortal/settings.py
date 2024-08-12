@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ubmjtudekoc9g2+w)uun7(0*etm0p@imm$bh_28^^4_95&j2zg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sirpl1-31-linux.local', '127.0.0.1']
+ALLOWED_HOSTS = ['sirpl1-31-linux.local', '127.0.0.1', '10.168.12.215']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'labPortalHome',
+    'django_bootstrap_icons',
 ]
 
 MIDDLEWARE = [
@@ -142,6 +143,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'labPortalHome/static'),
 ]
+
+BS_ICONS_BASE_PATH = os.path.join(BASE_DIR, 'static/bootstrap-icons/')
 
 # Storage backend for serving static files
 #STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
