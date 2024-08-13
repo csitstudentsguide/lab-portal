@@ -6,8 +6,7 @@
 
 <head>
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'labPortalHome/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static '/bootstrap-icons/css/bootstrap-icons.css' %}">    
+    <link rel="stylesheet" href="{% static 'labPortalHome/css/bootstrap.min.css' %}">    
     <style>
         section {
             padding: 60px 0;
@@ -17,7 +16,7 @@
 
 <body>
     <!-- Navbar starts -->
-    <nav class="navbar navbar-expand-lg bg-light border-bottom border-body" data-bs-theme="light">
+    <nav class="navbar navbar-expand-lg bg-secondary border-bottom border-body" data-bs-theme="dark">
         <div class="container">
             <a href="{% url '' %}" class="navbar-brand">
                 {% bs_icon 'laptop' size='1em' extra_classes="bi-valign-default" %} &nbsp;
@@ -31,23 +30,23 @@
             <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
                 <ul class="navbar-nav me-end mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url '' %}">Home</a>
+                        <a class="nav-link text-light" href="{% url '' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'lab-rules' %}">Lab-rules</a>
+                        <a class="nav-link text-light" href="{% url 'lab-rules' %}">Lab-rules</a>
                     </li>
                     <li class="nav-item">
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <button type="button" class="btn btn-danger text-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         Launch Vision Mission
                         </button>
                     
                         <!-- Modal -->
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header bg-danger text-center">
-                                <h1 class="modal-title w-100 fs-5 text-light " id="staticBackdropLabel">Department of Computer Science</h1>                                
+                            <div class="modal-content bg-light">
+                                <div class="modal-header bg-danger text-light text-center">
+                                <h1 class="modal-title w-100 fs-5" id="staticBackdropLabel">Department of Computer Science</h1>                                
                                 </div>
                                 <div class="modal-body">
                              
@@ -57,7 +56,7 @@
                                         {% bs_icon 'eye-fill' size='1em' extra_classes="bi-valign-default" %}                                        
                                         Vision
                                     </h2>
-                                    <p class="lead text-justify">
+                                    <p class="lead text-justify text-dark">
                                         To excel in computer science education and research, by prepairing the students with practical
                                         knowledge and ethical values. We strive to empower students, enabling them to innovate using 
                                         cutting-edge computing technologies to address societal challenges.
@@ -72,14 +71,14 @@
                                         Mission
                                     </h2>
                                     <ul>
-                                        <li class="lead mb-2">Empower students with a strong foundation in computer science
+                                        <li class="lead mb-2 text-dark">Empower students with a strong foundation in computer science
                                             fundamentals and technical skills through innovative teaching pedagogies, fostering practical knowledge.
                                         </li>
-                                        <li class="lead mb-2">
+                                        <li class="lead mb-2 text-dark">
                                             Cultivate ethical values, creativity, and an entrepreneurial mind-set among students to inspire innovation.
                                         </li>
-                                        <li class="lead mb-2">Encourage students to prioritize sustainable solutions that enhance societal well-being.</li>
-                                        <li class="lead mb-2">Foster a culture of research excellence in computer science by promoting collaborative partnerships
+                                        <li class="lead mb-2 text-dark">Encourage students to prioritize sustainable solutions that enhance societal well-being.</li>
+                                        <li class="lead mb-2 text-dark">Foster a culture of research excellence in computer science by promoting collaborative partnerships
                                             between academia and industry.
                                         </li>
                                     </ul>
@@ -130,7 +129,7 @@
                             <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                                 <label for="newsletter1" class="visually-hidden">Email address</label>
                                 <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                                <button class="btn btn-primary" type="button">Subscribe</button>
+                                <button class="btn btn-danger" type="button">Subscribe</button>
                             </div>
                         </form>
                     </div>
