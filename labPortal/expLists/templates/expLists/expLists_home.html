@@ -1,0 +1,56 @@
+{% extends 'expLists/base.html' %}
+{% load static %}
+{% load bootstrap_icons %}
+
+{% block title %} Lab Portal | Home {% endblock %}
+
+{% block content %}
+
+<!-- Intro section start -->
+<section id="intro">
+    <div class="container-lg">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-5 text-center text-md-start">
+                <h1>
+                    <div class="display-4">Experiment Lists </div>
+                    <div class="lead my-4 text-muted">Get your experiments right here</div>
+                </h1>
+                
+                <button class="btn btn-secondary btn-lg" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Select your subject
+                </button>              
+            </div>
+
+            <!-- Offcanvas - to pull from left side -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header mt-2">
+                    <h5 class="offcanvas-title h3" id="offcanvasExampleLabel">Experiment Listing</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                    <div class="dropdown mt-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            All Subjects
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Programming for Problem Solving</a></li>
+                            <li><a class="dropdown-item" href="#">Python Programming</a></li>                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Offcanvas ends -->
+
+            <div class="col-5 text-center d-none d-md-block">
+                <img class="img-fluid" src="{% static 'labPortalHome/img/computer-lab.png' %}" alt="computer lab">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Intro section end --> 
+
+{% endblock %}

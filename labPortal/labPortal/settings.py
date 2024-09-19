@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'labPortalHome',
     'django_bootstrap_icons',
+    'expLists',
 ]
 
 MIDDLEWARE = [
