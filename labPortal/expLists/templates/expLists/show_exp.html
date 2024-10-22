@@ -1,0 +1,58 @@
+{% extends 'expLists/base.html' %}
+{% load static %}
+{% load bootstrap_icons %}
+
+{% block title %} Lab Portal | All Exp Lists {% endblock %}
+
+{% block content %}
+<section id="exp-lists">
+    <div class="container-lg">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-3 text-center text-md-start">
+                <h1>
+                    <div class="display-6">Experiment Lists</div>                                        
+                </h1>
+            </div>
+        </div>
+    </div>   
+
+    <div class="container-lg mt-3">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-10 text-center text-md-start">
+            <table class="table table-hover border">
+                <thead>
+                  <tr>
+                    <th scope="col">PROGRAM</th>
+                    <th scope="col">AY</th>
+                    <th scope="col">TERM</th>
+                    <th scope="col">YEAR</th>
+                    <th scope="col">SEM</th>
+                    <th scope="col">SUBJECT</th>
+                    <th scope="col">EXP NO</th>                    
+                    <th scope="col">EXP FILE</th>                        
+                  </tr>
+                </thead>
+                <tbody>
+                {% for item in all_exp %}
+                  <tr>
+                    <td scope="row">{{item.programme}}</td>
+                    <td>{{item.ay}}</td>
+                    <td class="table-striped">{{item.term}}</td>
+                    <td>{{item.year}}</td>
+                    <td class="table-striped">{{item.sem}}</td>
+                    <td>{{item.subject}}</td>
+                    <td class="table-striped">{{item.exp_no}}</td>
+                    <td><a target="_blank" href="{% url ''%}media/{{item.exp_file}}">Exp No. {{item.exp_no}}</a></td>                       </tr>
+                  <tr>
+                {% endfor %}
+                </tbody>
+              </table>                
+        </div>
+    </div>        
+  </div>          
+</section>    
+    
+{% endblock %}    
+    
+</body>
+</html>

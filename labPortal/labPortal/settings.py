@@ -145,6 +145,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'labPortalHome/static'),
 ]
 
+MEDIA_URL = 'media/'
+
+MEDIA_ROOT = 'media'
+
 BS_ICONS_BASE_PATH = os.path.join(BASE_DIR, 'static/bootstrap-icons/')
 
 # Storage backend for serving static files
